@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+
+<!-- - Dark cyan: hsl(158, 36%, 37%) - hsl(158_36%_37%)
+- Cream: hsl(30, 38%, 92%)           - hsl(30_38%_92%)
+- Very dark blue: hsl(212, 21%, 14%) - hsl(212_21%_14%)
+- Dark grayish blue: hsl(228, 12%, 48%) - hsl(228_12%_48%)
+- White: hsl(0, 0%, 100%)               - hsl(0_0%_100%) -->
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          'montserrat': ['Montserrat', 'serif'],
+          'fraunces': ['Fraunces', 'sans-serif']
+        },
+        colors: {
+          darkCyan: "hsl(158, 36%, 37%)",
+          cream: "hsl(30, 38%, 92%)",
+          veryDarkBlue: "hsl(212, 21%, 14%)",
+          darkGrayishBlue: "hsl(228, 12%, 48%)",
+          white: "hsl(0, 0%, 100%)"
+        }
+      }
+    }
+  }
+</script>
+
+</head>
+<body class="bg-cream flex flex-1 items-center justify-center min-h-screen p-4">
+
+  <main class="max-w-80 md:max-w-lg flex flex-col md:flex-row bg-white rounded-lg">
+
+    <div class="w-full md:w-1/2">
+      <img class="block md:hidden rounded-t-lg" src="images/image-product-mobile.jpg" alt="Perfume Image Mobile">
+      <img class="hidden md:block rounded-l-lg" src="images/image-product-desktop.jpg" alt="Perfume Image">
+    </div>
+
+    <div class="p-6 w-full md:w-1/2">
+      <p class="font-montserrat md:text-xs uppercase tracking-[0.4em] pb-4">Perfume</p>
+
+      <h1 class="font-fraunces text-3xl font-bold pb-4 text-veryDarkBlue leading-none">Gabrielle Essence Eau De Parfum</h1>
+
+      <p class="font-montserrat text-darkCyan text-sm md:text-xs leading-5 tracking-wide pb-4">
+        A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+        Perfumer-Creator for the House of CHANEL.
+      </p>
+
+      <div class="flex items-center pb-4">
+      <p class="font-fraunces font-bold text-darkCyan text-2xl">$149.99</p>
+      <p class="text-darkCyan pl-2 line-through text-xs">$169.99</p>
+      </div>
+
+      <button class="flex justify-center items-center w-full mt-2 bg-darkCyan text-white text-center px-4 py-2 rounded-lg hover:bg-veryDarkBlue transition duration 300ms ease">
+        <img src="images/icon-cart.svg" alt="Cart Icon">
+        <p class="pl-2 font-semibold">Add to Cart</p>
+      </button>
+    </div>
+
+  </main>
+  
+  
+</body>
+</html>
